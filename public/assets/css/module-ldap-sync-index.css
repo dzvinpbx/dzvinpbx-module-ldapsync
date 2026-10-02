@@ -1,0 +1,50 @@
+/*
+ * MikoPBX - free phone system for small business
+ * Copyright © 2017-2023 Alexey Portnov and Nikolay Beketov
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with this program.
+ * If not, see <https://www.gnu.org/licenses/>.
+ */
+
+/** More extensions on one page */
+#disabled-users-result td {
+    padding: .1em .6em;
+}
+
+#disabled-users-result th {
+    padding: .4em .6em;
+}
+
+/*
+ * Conflicts tab: the "Errors" cell can hold multi-line REST responses
+ * (even after distillRestErrors leaves something long behind) and a
+ * single unwrappable glyph-run must not blow the row width out.
+ * Cap the cell, keep word breaks sane, and allow vertical scroll as
+ * a last resort instead of pushing neighbouring columns off-screen.
+ */
+#conflicts-result td.conflict-errors {
+    max-width: 32em;
+    vertical-align: top;
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+
+#conflicts-result td.conflict-errors .conflict-errors-body {
+    max-height: 14em;
+    overflow-y: auto;
+}
+
+#conflicts-result td.conflict-errors .conflict-errors-body > div + div {
+    margin-top: .25em;
+}

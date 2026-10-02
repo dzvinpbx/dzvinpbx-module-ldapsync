@@ -1,0 +1,57 @@
+<?php
+/*
+ * MikoPBX - free phone system for small business
+ * Copyright © 2017-2023 Alexey Portnov and Nikolay Beketov
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with this program.
+ * If not, see <https://www.gnu.org/licenses/>.
+ */
+
+namespace Modules\ModuleLdapSync\Lib;
+
+class Constants
+{
+    public const HIDDEN_PASSWORD = 'xxxxxxxx';
+
+    public const USER_NAME_ATTR = 'userNameAttribute';
+    public const USER_MOBILE_ATTR = 'userMobileAttribute';
+    public const USER_EXTENSION_ATTR = 'userExtensionAttribute';
+    public const USER_EMAIL_ATTR = 'userEmailAttribute';
+    public const USER_AVATAR_ATTR = 'userAvatarAttribute';
+    public const USER_PASSWORD_ATTR = 'userPasswordAttribute';
+    public const USER_GUID_ATTR = 'ObjectGUID';
+    public const USER_ACCOUNT_CONTROL_ATTR = 'userAccountControl';
+    public const USER_DISABLED = 'userDisabled';
+    public const USER_SYNC_RESULT = 'usersSyncResult';
+    public const USER_ID_IN_MIKOPBX = 'userIdInMikoPBX';
+    public const SYNC_RESULT_UPDATED = 'UPDATED';
+    public const SYNC_RESULT_SKIPPED = 'SKIPPED';
+
+    public const SYNC_RESULT_CONFLICT = 'CONFLICT';
+
+    public const USER_HAD_CHANGES_ON = 'userHadChangesOnTheSide';
+    public const HAD_CHANGES_ON_PBX = 'OnPBXSide';
+    public const HAD_CHANGES_ON_AD = 'OnDomainSide';
+
+    public const SYNC_RESULT_CONFLICT_SIDE = 'CONFLICT_SIDE';
+    public const PBX_UPDATE_CONFLICT = 'PBX_UPDATE_CONFLICT';
+    public const LDAP_UPDATE_CONFLICT = 'LDAP_UPDATE_CONFLICT';
+    public const CONFLICT_DATA= 'CONFLICT_DATA';
+
+    // Internal marker carried on the AnswerStructure data bucket to signal that
+    // an LDAP SIP password failed core-side strength preflight. updateUserData
+    // records it as a conflict (so the admin sees it on the Conflicts tab) and
+    // strips the marker before the response is handed further up.
+    public const WEAK_LDAP_PASSWORD_NOTICE = 'weakLdapPasswordNotice';
+    public const CONFLICT_KIND_WEAK_LDAP_SECRET = 'LDAP_WEAK_SIP_SECRET';
+}
