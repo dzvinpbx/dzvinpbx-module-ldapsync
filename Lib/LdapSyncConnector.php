@@ -351,8 +351,9 @@ class LdapSyncConnector extends Injectable
         } catch (\LdapRecord\Auth\BindException $e) {
             $detail = $e->getDetailedError();
             $message = $e->getMessage();
-            if ($detail !== null) {
-                $message .= ' — ' . $detail->getDiagnosticMessage();
+            $diag = $detail !== null ? trim((string) $detail->getDiagnosticMessage()) : '';
+            if ($diag !== '') {
+                $message .= ' — ' . $diag;
             }
             $res->success = false;
             $res->messages['error'][] = $message;

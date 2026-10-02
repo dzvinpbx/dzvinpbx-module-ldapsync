@@ -2,6 +2,6 @@
   "developer": "Dzvin PBX (fork of MIKO module)",
   "moduleUniqueID": "ModuleLdapSync",
   "support_email": "",
-  "version": "1.41",
+  "version": "1.42",
   "min_pbx_version": "2025.1.1"
 }
