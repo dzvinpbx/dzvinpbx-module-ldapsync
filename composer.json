@@ -1,5 +1,5 @@
 {
-    "name": "mikopbx/moduletemplate",
+    "name": "dzvinpbx/module-ldapsync",
     "description": "ModuleLdapSync",
     "require": {
         "php": "^8.4",
@@ -16,7 +16,7 @@
         "pbx",
         "asterisk",
         "freepbx",
-        "mikopbx",
+        "dzvinpbx",
         "sip",
         "voip",
         "phalcon",
@@ -24,33 +24,23 @@
         "uc"
     ],
     "license": "GPL-3.0-or-later",
-    "homepage": "https://github.com/mikopbx/ModuleLdapSync",
+    "homepage": "https://github.com/dzvinpbx/dzvinpbx-module-ldapsync",
     "support": {
-        "email": "help@mikopbx.com",
-        "wiki": "https://wiki.mikopbx.com",
-        "issues": "https://github.com/mikopbx/Core/issues",
-        "source": "https://github.com/mikopbx/Core",
-        "forum": "https://qa.mikopbx.ru",
-        "chat": "https://t.me/mikopbx_dev"
+        "issues": "https://github.com/dzvinpbx/dzvinpbx-module-ldapsync/issues",
+        "source": "https://github.com/dzvinpbx/dzvinpbx-module-ldapsync"
     },
     "authors": [
         {
             "name": "Alexey Portnov",
             "email": "apor@miko.ru",
             "homepage": "https://www.facebook.com/PortnovAlexey",
-            "role": "Developer"
+            "role": "Developer (upstream MikoPBX ModuleLdapSync)"
         },
         {
             "name": "Nikolay Beketov",
             "email": "nbek@miko.ru",
             "homepage": "https://www.linkedin.com/in/nikolay-beketov",
-            "role": "Developer"
-        }
-    ],
-    "funding": [
-        {
-            "type": "patreon",
-            "url": "https://www.patreon.com/mikopbx"
+            "role": "Developer (upstream MikoPBX ModuleLdapSync)"
         }
     ],
     "config": {

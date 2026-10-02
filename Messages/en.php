@@ -11,7 +11,7 @@ return [
     'module_ldap_usersSyncResult' => 'Status',
     'module_ldap_UPDATED' => 'processed',
     /*
- * MikoPBX - free phone system for small business
+ * Dzvin PBX - free phone system for small business
  * Copyright © 2017-2023 Alexey Portnov and Nikolay Beketov
  *
  * This program is free software: you can redistribute it and/or modify
@@ -39,12 +39,12 @@ return [
     'module_ldap_LdapAdminLogin' => 'Username and password with read/write access to the domain',
     'module_ldap_LdapBaseDN' => 'Domain root',
     'module_ldap_LdapPassword' => 'Password',
-    'module_ldap_LdapAttributesHeader' => 'Attributes in the domain for matching with data in MikoPBX',
+    'module_ldap_LdapAttributesHeader' => 'Attributes in the domain for matching with data in DzvinPBX',
     'module_ldap_UserExtensionAttribute' => 'User extension number',
     'module_ldap_UserMobileAttribute' => 'Mobile phone',
     'module_ldap_UserEmailAttribute' => 'Email address',
     'module_ldap_UserAvatarAttribute' => 'Photo attribute',
-    'module_ldap_UpdateAttributes' => 'Update data in the domain when changing it in MikoPBX (write rights required)',
+    'module_ldap_UpdateAttributes' => 'Update data in the domain when changing it in DzvinPBX (write rights required)',
     'module_ldap_LdapOrganizationalUnit' => 'Subdivision',
     'module_ldap_LdapUserFilter' => 'Additional user filter',
     'module_ldap_LdapCheckGetListHeader' => 'Test to get list of LDAP users',
@@ -56,10 +56,10 @@ return [
     'module_ldap_ValidateAdministrativePasswordIsEmpty' => 'Password not filled for domain user',
     'module_ldap_ValidateBaseDNIsEmpty' => 'Domain root not filled',
     'module_ldap_LdapManualSyncHeader' => 'Manual sync',
-    'module_ldap_LdapManualSyncManual' => 'When you click the button, a portion of 20 users will be synchronized between the specified domain controller and MikoPBX',
+    'module_ldap_LdapManualSyncManual' => 'When you click the button, a portion of 20 users will be synchronized between the specified domain controller and DzvinPBX',
     'module_ldap_LdapManualSyncButton' => 'Synchronize data',
     'module_ldap_userHadChangesOnTheSide' => 'Updated',
-    'module_ldap_OnPBXSide' => 'inside MikoPBX',
+    'module_ldap_OnPBXSide' => 'inside DzvinPBX',
     'module_ldap_OnDomainSide' => 'in the domain',
     'module_ldap_SKIPPED' => 'skipped',
     'module_ldap_EnableAutoSync' => 'Enable scheduled synchronization',
@@ -82,7 +82,7 @@ return [
     'module_ldap_SyncTabHeader' => 'Synchronization and conflicts',
     'module_ldap_TabAttributes' => 'Synchronization fields',
     'module_ldap_DeleteAllConflicts' => 'Clear all conflicts',
-    'module_ldap_UpdateAttributesMessage' => 'When changing data in MikoPBX, the domain will update: internal number, mobile number, email, avatar, SIP password',
+    'module_ldap_UpdateAttributesMessage' => 'When changing data in DzvinPBX, the domain will update: internal number, mobile number, email, avatar, SIP password',
     'module_ldap_UserPasswordAttribute' => 'SIP Password',
     'module_ldap_UseTLS' => 'TLS/SSL',
     'module_ldap_UserName' => 'Username',
@@ -114,7 +114,7 @@ return [
     'module_ldap_tt_verify_warning_header' => 'Insecure without CA',
     'module_ldap_tt_verify_warning' => 'With validation off, the connection is still encrypted but an attacker with network access can impersonate the LDAP server.',
     'module_ldap_tt_updateAttr_header' => 'Two-way sync',
-    'module_ldap_tt_updateAttr_desc' => 'When on, changes made in MikoPBX are written back to the LDAP directory. The following user attributes get propagated:',
+    'module_ldap_tt_updateAttr_desc' => 'When on, changes made in DzvinPBX are written back to the LDAP directory. The following user attributes get propagated:',
     'module_ldap_tt_updateAttr_extension' => 'internal extension number',
     'module_ldap_tt_updateAttr_mobile' => 'mobile phone',
     'module_ldap_tt_updateAttr_email' => 'email address',

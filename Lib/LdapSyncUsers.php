@@ -1,7 +1,7 @@
 <?php
 
 /*
- * MikoPBX - free phone system for small business
+ * Dzvin PBX - free phone system for small business
  * Copyright © 2017-2024 Alexey Portnov and Nikolay Beketov
  *
  * This program is free software: you can redistribute it and/or modify
@@ -20,8 +20,8 @@
 
 namespace Modules\ModuleLdapSync\Lib;
 
-use MikoPBX\Common\Models\Extensions;
-use MikoPBX\Common\Models\Users;
+use DzvinPBX\Common\Models\Extensions;
+use DzvinPBX\Common\Models\Users;
 use Modules\ModuleLdapSync\Models\ADUsers;
 use Phalcon\Di\Injectable;
 
@@ -51,7 +51,7 @@ class LdapSyncUsers extends Injectable
             ],
         ];
 
-        $di=MikoPBXVersion::getDefaultDi();
+        $di=DzvinPBXVersion::getDefaultDi();
         $selectedUsers = $di->get('modelsManager')->createBuilder($parameters)
             ->getQuery()
             ->execute();
@@ -83,7 +83,7 @@ class LdapSyncUsers extends Injectable
             ],
         ];
 
-        $di=MikoPBXVersion::getDefaultDi();
+        $di=DzvinPBXVersion::getDefaultDi();
 
         $records = $di->get('modelsManager')->createBuilder($parameters)
             ->getQuery()

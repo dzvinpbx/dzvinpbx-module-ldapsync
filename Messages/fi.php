@@ -1,7 +1,7 @@
 <?php
 return [
     /*
- * MikoPBX - free phone system for small business
+ * Dzvin PBX - free phone system for small business
  * Copyright © 2017-2023 Alexey Portnov and Nikolay Beketov
  *
  * This program is free software: you can redistribute it and/or modify
@@ -36,14 +36,14 @@ return [
     'module_ldap_LdapAdminLogin' => 'Käyttäjätunnus ja salasana luku- ja kirjoitusoikeuksilla verkkotunnuksessa',
     'module_ldap_LdapBaseDN' => 'Verkkotunnuksen juuri',
     'module_ldap_LdapPassword' => 'Salasana',
-    'module_ldap_LdapAttributesHeader' => 'Verkkotunnuksen attribuutit MikoPBX:n tietojen täsmäyttämiseksi',
+    'module_ldap_LdapAttributesHeader' => 'Verkkotunnuksen attribuutit DzvinPBX:n tietojen täsmäyttämiseksi',
     'module_ldap_UserExtensionAttribute' => 'Käyttäjän sisäinen numero',
     'module_ldap_UserMobileAttribute' => 'Matkapuhelin',
     'module_ldap_UserEmailAttribute' => 'Sähköpostiosoite',
     'module_ldap_UserNameAttribute' => 'Käyttäjän etu- ja sukunimi',
     'module_ldap_UserAccountControl' => 'Attribuutti, johon käyttäjän estotila tallennetaan',
     'module_ldap_UserAvatarAttribute' => 'Ominaisuus valokuvalla',
-    'module_ldap_UpdateAttributes' => 'Päivitä verkkotunnuksen tiedot, kun niitä muutetaan MikoPBX:ssä (kirjoitusoikeudet vaaditaan)',
+    'module_ldap_UpdateAttributes' => 'Päivitä verkkotunnuksen tiedot, kun niitä muutetaan DzvinPBX:ssä (kirjoitusoikeudet vaaditaan)',
     'module_ldap_LdapOrganizationalUnit' => 'Alajako',
     'module_ldap_LdapUserFilter' => 'Lisäkäyttäjäsuodatin',
     'module_ldap_LdapCheckGetListHeader' => 'Testaa LDAP-käyttäjien luettelon saaminen',
@@ -61,11 +61,11 @@ return [
     'module_ldap_ValidateUserEmailAttributeIsEmpty' => 'Attribuuttia, jossa on käyttäjän sähköpostiosoite verkkotunnuksessa, ei ole täytetty',
     'module_ldap_ValidateUserAccountControlIsEmpty' => 'Attribuuttia, joka sisältää käyttäjän aktiviteettiattribuutin verkkotunnuksessa, ei ole täytetty',
     'module_ldap_LdapManualSyncHeader' => 'Manuaalinen synkronointi',
-    'module_ldap_LdapManualSyncManual' => 'Kun napsautat painiketta, osa 20 käyttäjästä synkronoidaan määritetyn toimialueen ohjaimen ja MikoPBX:n välillä.',
+    'module_ldap_LdapManualSyncManual' => 'Kun napsautat painiketta, osa 20 käyttäjästä synkronoidaan määritetyn toimialueen ohjaimen ja DzvinPBX:n välillä.',
     'module_ldap_LdapManualSyncButton' => 'Synkronoi tiedot',
     'module_ldap_usersSyncResult' => 'Status',
     'module_ldap_userHadChangesOnTheSide' => 'Päivitetty',
-    'module_ldap_OnPBXSide' => 'MikoPBX:n sisällä',
+    'module_ldap_OnPBXSide' => 'DzvinPBX:n sisällä',
     'module_ldap_OnDomainSide' => 'verkkotunnuksessa',
     'module_ldap_SKIPPED' => 'jäi väliin',
     'module_ldap_UPDATED' => 'käsitelty',
@@ -83,7 +83,7 @@ return [
     'module_ldap_TabAttributes' => 'Synkronointikentät',
     'module_ldap_DeleteAllConflicts' => 'Tyhjennä kaikki ristiriidat',
     'module_ldap_UseTLS' => 'TLS/SSL',
-    'module_ldap_UpdateAttributesMessage' => 'Kun tiedot muuttuvat MikoPBX:ssä, verkkotunnuksessa päivitetään seuraavat tiedot: sisäinen numero, matkapuhelinnumero, sähköposti, avatar, SIP-salasana',
+    'module_ldap_UpdateAttributesMessage' => 'Kun tiedot muuttuvat DzvinPBX:ssä, verkkotunnuksessa päivitetään seuraavat tiedot: sisäinen numero, matkapuhelinnumero, sähköposti, avatar, SIP-salasana',
     'module_ldap_UserPasswordAttribute' => 'SIP-salasana',
     'module_ldap_UserName' => 'Käyttäjätunnus',
     'module_ldap_UserNumber' => 'Laajennusnumero',

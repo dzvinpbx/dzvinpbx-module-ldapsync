@@ -1,7 +1,7 @@
 <?php
 return [
     /*
- * MikoPBX - free phone system for small business
+ * Dzvin PBX - free phone system for small business
  * Copyright © 2017-2023 Alexey Portnov and Nikolay Beketov
  *
  * This program is free software: you can redistribute it and/or modify
@@ -36,15 +36,15 @@ return [
     'module_ldap_LdapAdminLogin' => 'Korisničko ime i lozinka s dopuštenjima za čitanje i pisanje na domeni',
     'module_ldap_LdapBaseDN' => 'Korijen domene',
     'module_ldap_LdapPassword' => 'Lozinka',
-    'module_ldap_LdapAttributesHeader' => 'Atributi u domeni za usklađivanje s podacima u MikoPBX',
+    'module_ldap_LdapAttributesHeader' => 'Atributi u domeni za usklađivanje s podacima u DzvinPBX',
     'module_ldap_UserExtensionAttribute' => 'Dodatni broj korisnika',
     'module_ldap_UserMobileAttribute' => 'Mobitel',
     'module_ldap_UserEmailAttribute' => 'E-mail adresa',
     'module_ldap_UserNameAttribute' => 'Ime i prezime korisnika',
     'module_ldap_UserAccountControl' => 'Atribut gdje je pohranjen status blokiranja korisnika',
     'module_ldap_UserAvatarAttribute' => 'Atribut uz fotografiju',
-    'module_ldap_UpdateAttributesMessage' => 'Prilikom promjene podataka u MikoPBX-u, u domeni će se ažurirati: interni broj, broj mobitela, email, avatar, SIP lozinka',
-    'module_ldap_UpdateAttributes' => 'Ažuriraj podatke u domeni kada se promijene u MikoPBX (zahtijeva dopuštenje za pisanje)',
+    'module_ldap_UpdateAttributesMessage' => 'Prilikom promjene podataka u DzvinPBX-u, u domeni će se ažurirati: interni broj, broj mobitela, email, avatar, SIP lozinka',
+    'module_ldap_UpdateAttributes' => 'Ažuriraj podatke u domeni kada se promijene u DzvinPBX (zahtijeva dopuštenje za pisanje)',
     'module_ldap_LdapOrganizationalUnit' => 'Podjela',
     'module_ldap_LdapUserFilter' => 'Dodatni korisnički filter',
     'module_ldap_LdapCheckGetListHeader' => 'Test za dobivanje popisa LDAP korisnika',
@@ -62,11 +62,11 @@ return [
     'module_ldap_ValidateUserEmailAttributeIsEmpty' => 'Atribut s e-poštom korisnika u domeni nije popunjen',
     'module_ldap_ValidateUserAccountControlIsEmpty' => 'Atribut s atributom aktivnosti korisnika u domeni nije popunjen',
     'module_ldap_LdapManualSyncHeader' => 'Ručna sinkronizacija',
-    'module_ldap_LdapManualSyncManual' => 'Kada kliknete gumb, dio od 20 korisnika će se sinkronizirati između navedenog kontrolera domene i MikoPBX-a',
+    'module_ldap_LdapManualSyncManual' => 'Kada kliknete gumb, dio od 20 korisnika će se sinkronizirati između navedenog kontrolera domene i DzvinPBX-a',
     'module_ldap_LdapManualSyncButton' => 'Sinkronizirajte podatke',
     'module_ldap_usersSyncResult' => 'Status',
     'module_ldap_userHadChangesOnTheSide' => 'Ažurirano',
-    'module_ldap_OnPBXSide' => 'unutar MikoPBX-a',
+    'module_ldap_OnPBXSide' => 'unutar DzvinPBX-a',
     'module_ldap_OnDomainSide' => 'u domeni',
     'module_ldap_SKIPPED' => 'propušteno',
     'module_ldap_UPDATED' => 'obrađeno',

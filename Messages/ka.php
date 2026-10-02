@@ -1,7 +1,7 @@
 <?php
 return [
     /*
- * MikoPBX - free phone system for small business
+ * Dzvin PBX - free phone system for small business
  * Copyright © 2017-2023 Alexey Portnov and Nikolay Beketov
  *
  * This program is free software: you can redistribute it and/or modify
@@ -34,14 +34,14 @@ return [
     'module_ldap_LdapAdminLogin' => 'მომხმარებლის სახელი და პაროლი დომენზე წაკითხვის/ჩაწერის წვდომით',
     'module_ldap_LdapBaseDN' => 'დომენის ფესვი',
     'module_ldap_LdapPassword' => 'პაროლი',
-    'module_ldap_LdapAttributesHeader' => 'ატრიბუტები დომენში MikoPBX-ის მონაცემებთან შესატყვისი',
+    'module_ldap_LdapAttributesHeader' => 'ატრიბუტები დომენში DzvinPBX-ის მონაცემებთან შესატყვისი',
     'module_ldap_UserExtensionAttribute' => 'მომხმარებლის შიდა ნომერი',
     'module_ldap_UserMobileAttribute' => 'მობილური ტელეფონი',
     'module_ldap_UserEmailAttribute' => 'ელექტრონული ფოსტის მისამართი',
     'module_ldap_UserNameAttribute' => 'მომხმარებლის სახელი და გვარი',
     'module_ldap_UserAccountControl' => 'ატრიბუტი, სადაც მომხმარებლის დაბლოკვის სტატუსი ინახება',
     'module_ldap_UserAvatarAttribute' => 'ატრიბუტი ფოტოთი',
-    'module_ldap_UpdateAttributes' => 'MikoPBX-ში დომენის მონაცემების შეცვლისას მათი განახლება (საჭიროა ჩაწერის უფლებები)',
+    'module_ldap_UpdateAttributes' => 'DzvinPBX-ში დომენის მონაცემების შეცვლისას მათი განახლება (საჭიროა ჩაწერის უფლებები)',
     'module_ldap_LdapOrganizationalUnit' => 'ქვედანაყოფი',
     'module_ldap_LdapUserFilter' => 'მომხმარებლის დამატებითი ფილტრი',
     'module_ldap_LdapCheckGetListHeader' => 'ტესტი LDAP მომხმარებლების სიის მისაღებად',
@@ -54,11 +54,11 @@ return [
     'module_ldap_ValidateAdministrativePasswordIsEmpty' => 'პაროლი არ არის შევსებული დომენის მომხმარებლისთვის',
     'module_ldap_ValidateBaseDNIsEmpty' => 'დომენის ფესვი არ არის შევსებული',
     'module_ldap_LdapManualSyncHeader' => 'ხელით სინქრონიზაცია',
-    'module_ldap_LdapManualSyncManual' => 'როდესაც დააჭირეთ ღილაკს, 20 მომხმარებლის ნაწილი სინქრონიზებული იქნება მითითებულ დომენის კონტროლერსა და MikoPBX-ს შორის',
+    'module_ldap_LdapManualSyncManual' => 'როდესაც დააჭირეთ ღილაკს, 20 მომხმარებლის ნაწილი სინქრონიზებული იქნება მითითებულ დომენის კონტროლერსა და DzvinPBX-ს შორის',
     'module_ldap_LdapManualSyncButton' => 'მონაცემთა სინქრონიზაცია',
     'module_ldap_usersSyncResult' => 'სტატუსი',
     'module_ldap_userHadChangesOnTheSide' => 'განახლებულია',
-    'module_ldap_OnPBXSide' => 'MikoPBX-ის შიგნით',
+    'module_ldap_OnPBXSide' => 'DzvinPBX-ის შიგნით',
     'module_ldap_OnDomainSide' => 'დომენში',
     'module_ldap_SKIPPED' => 'გამოტოვა',
     'module_ldap_UPDATED' => 'დამუშავებული',
@@ -83,7 +83,7 @@ return [
     'module_ldap_TabAttributes' => 'სინქრონიზაციის ველები',
     'module_ldap_DeleteAllConflicts' => 'გაასუფთავეთ ყველა კონფლიქტი',
     'module_ldap_UseTLS' => 'TLS/SSL',
-    'module_ldap_UpdateAttributesMessage' => 'როდესაც მონაცემები იცვლება MikoPBX-ში, შემდეგი განახლდება დომენში: შიდა ნომერი, მობილურის ნომერი, ელფოსტა, ავატარი, SIP პაროლი.',
+    'module_ldap_UpdateAttributesMessage' => 'როდესაც მონაცემები იცვლება DzvinPBX-ში, შემდეგი განახლდება დომენში: შიდა ნომერი, მობილურის ნომერი, ელფოსტა, ავატარი, SIP პაროლი.',
     'module_ldap_UserPasswordAttribute' => 'SIP პაროლი',
     'module_ldap_UserName' => 'მომხმარებლის სახელი',
     'module_ldap_UserNumber' => 'გაფართოების ნომერი',

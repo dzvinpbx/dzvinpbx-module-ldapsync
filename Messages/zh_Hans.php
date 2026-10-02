@@ -1,7 +1,7 @@
 <?php
 return [
     /*
- * MikoPBX - free phone system for small business
+ * Dzvin PBX - free phone system for small business
  * Copyright © 2017-2023 Alexey Portnov and Nikolay Beketov
  *
  * This program is free software: you can redistribute it and/or modify
@@ -34,14 +34,14 @@ return [
     'module_ldap_LdapAdminLogin' => '具有域读/写访问权限的用户名和密码',
     'module_ldap_LdapBaseDN' => '域根',
     'module_ldap_LdapPassword' => '密码',
-    'module_ldap_LdapAttributesHeader' => '域中用于与 MikoPBX 中的数据匹配的属性',
+    'module_ldap_LdapAttributesHeader' => '域中用于与 DzvinPBX 中的数据匹配的属性',
     'module_ldap_UserExtensionAttribute' => '用户内部号码',
     'module_ldap_UserMobileAttribute' => '手机',
     'module_ldap_UserEmailAttribute' => '电子邮件',
     'module_ldap_UserNameAttribute' => '用户的名字和姓氏',
     'module_ldap_UserAccountControl' => '存储用户屏蔽状态的属性',
     'module_ldap_UserAvatarAttribute' => '带照片的属性',
-    'module_ldap_UpdateAttributes' => '在 MikoPBX 中更改域中的数据时更新数据（需要写入权限）',
+    'module_ldap_UpdateAttributes' => '在 DzvinPBX 中更改域中的数据时更新数据（需要写入权限）',
     'module_ldap_LdapOrganizationalUnit' => '细分',
     'module_ldap_LdapUserFilter' => '附加用户过滤器',
     'module_ldap_LdapCheckGetListHeader' => '测试获取 LDAP 用户列表',
@@ -54,11 +54,11 @@ return [
     'module_ldap_ValidateAdministrativePasswordIsEmpty' => '域用户密码未填写',
     'module_ldap_ValidateBaseDNIsEmpty' => '域根未填充',
     'module_ldap_LdapManualSyncHeader' => '手动同步',
-    'module_ldap_LdapManualSyncManual' => '单击该按钮时，将在指定域控制器和 MikoPBX 之间同步 20 个用户中的一部分',
+    'module_ldap_LdapManualSyncManual' => '单击该按钮时，将在指定域控制器和 DzvinPBX 之间同步 20 个用户中的一部分',
     'module_ldap_LdapManualSyncButton' => '同步数据',
     'module_ldap_usersSyncResult' => '地位',
     'module_ldap_userHadChangesOnTheSide' => '更新',
-    'module_ldap_OnPBXSide' => 'MikoPBX 内部',
+    'module_ldap_OnPBXSide' => 'DzvinPBX 内部',
     'module_ldap_OnDomainSide' => '在域中',
     'module_ldap_SKIPPED' => '跳过',
     'module_ldap_UPDATED' => '处理',
@@ -84,7 +84,7 @@ return [
     'module_ldap_DeleteAllConflicts' => '清除所有冲突',
     'module_ldap_UserPasswordAttribute' => 'SIP密码',
     'module_ldap_UseTLS' => '传输层安全/SSL',
-    'module_ldap_UpdateAttributesMessage' => '当 MikoPBX 中的数据发生变化时，以下内容将在域中更新：内部号码、手机号码、电子邮件、头像、SIP 密码',
+    'module_ldap_UpdateAttributesMessage' => '当 DzvinPBX 中的数据发生变化时，以下内容将在域中更新：内部号码、手机号码、电子邮件、头像、SIP 密码',
     'module_ldap_UserName' => '用户名',
     'module_ldap_UserNumber' => '分机号码',
     'module_ldap_findExtension' => '在用户列表中查找',

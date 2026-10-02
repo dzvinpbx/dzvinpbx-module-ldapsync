@@ -1,6 +1,6 @@
 <?php
 /*
- * MikoPBX - free phone system for small business
+ * Dzvin PBX - free phone system for small business
  * Copyright © 2017-2023 Alexey Portnov and Nikolay Beketov
  *
  * This program is free software: you can redistribute it and/or modify
@@ -19,8 +19,8 @@
 
 namespace Modules\ModuleLdapSync\Models;
 
-use MikoPBX\Common\Models\Users;
-use MikoPBX\Modules\Models\ModulesModelsBase;
+use DzvinPBX\Common\Models\Users;
+use DzvinPBX\Modules\Models\ModulesModelsBase;
 use Phalcon\Mvc\Model\Relation;
 
 class ADUsers extends ModulesModelsBase
@@ -106,7 +106,7 @@ class ADUsers extends ModulesModelsBase
 
     /**
      * Returns dynamic relations between module models and common models
-     * MikoPBX check it in ModelsBase after every call to keep data consistent
+     * DzvinPBX check it in ModelsBase after every call to keep data consistent
      *
      * There is example to describe the relation between Providers and ModuleTemplate models
      *

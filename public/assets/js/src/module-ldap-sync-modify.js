@@ -1,5 +1,5 @@
 /*
- * MikoPBX - free phone system for small business
+ * Dzvin PBX - free phone system for small business
  * Copyright © 2017-2023 Alexey Portnov and Nikolay Beketov
  *
  * This program is free software: you can redistribute it and/or modify
@@ -555,7 +555,7 @@ const ModuleLdapSyncModify = {
 	/**
 	 * Wires tooltips for every annotated field on the form. Uses the shared
 	 * TooltipBuilder helper from the admin cabinet so the popup structure
-	 * matches the rest of MikoPBX (see docs/TOOLTIP_GUIDELINES.md).
+	 * matches the rest of DzvinPBX (see docs/TOOLTIP_GUIDELINES.md).
 	 */
 	initializeTooltips() {
 		if (typeof TooltipBuilder === 'undefined') {
@@ -575,10 +575,10 @@ const ModuleLdapSyncModify = {
 				header: globalTranslate.module_ldap_tt_adminLogin_header,
 				description: globalTranslate.module_ldap_tt_adminLogin_desc,
 				list: [
-					'mikopbx',
-					'mikopbx@miko.ru',
-					'MIKO\\mikopbx',
-					'CN=mikopbx,CN=Users,DC=miko,DC=ru',
+					'dzvinpbx',
+					'dzvinpbx@example.com',
+					'DZVIN\\dzvinpbx',
+					'CN=dzvinpbx,CN=Users,DC=example,DC=com',
 				],
 				note: globalTranslate.module_ldap_tt_adminLogin_note,
 			}),
@@ -954,7 +954,7 @@ const ModuleLdapSyncModify = {
 				rowClass += ' positive';
 			}
 
-			html += `<tr data-value="${user['userIdInMikoPBX']}" class="${rowClass} open-user-row">`;
+			html += `<tr data-value="${user['userIdInDzvinPBX']}" class="${rowClass} open-user-row">`;
 
 			$.each(uniqueAttributes, (attrIndex, attrValue) => {
 				const cellValue = user[attrIndex] || '';

@@ -1,6 +1,6 @@
 <?php
 /*
- * MikoPBX - free phone system for small business
+ * Dzvin PBX - free phone system for small business
  * Copyright © 2017-2023 Alexey Portnov and Nikolay Beketov
  *
  * This program is free software: you can redistribute it and/or modify
@@ -37,15 +37,15 @@ return [
     'module_ldap_LdapAdminLogin' => 'Имя пользователя и пароль с правами на чтение и запись в домене',
     'module_ldap_LdapBaseDN' => 'Корень домена',
     'module_ldap_LdapPassword' => 'Пароль',
-    'module_ldap_LdapAttributesHeader'=> 'Аттрибуты в домене для сопоставления с данными в MikoPBX',
+    'module_ldap_LdapAttributesHeader'=> 'Аттрибуты в домене для сопоставления с данными в DzvinPBX',
     'module_ldap_UserExtensionAttribute' => 'Внутренний номер пользователя',
     'module_ldap_UserMobileAttribute' => 'Мобильный телефон',
     'module_ldap_UserEmailAttribute' => 'Адрес электронной почты',
     'module_ldap_UserNameAttribute'=> 'Имя и фамилия пользователя',
     'module_ldap_UserAccountControl'=> 'Атрибут где хранится статус блокировки пользователя',
     'module_ldap_UserAvatarAttribute'=> 'Атрибут с фотографией',
-    'module_ldap_UpdateAttributesMessage'=>'При изменении данных в MikoPBX в домене будут обновляться: внутренний номер, мобильный номер, email, аватар, пароль SIP',
-    'module_ldap_UpdateAttributes'=>'Обновлять данные в домене при изменении их в MikoPBX (нужны права на запись)',
+    'module_ldap_UpdateAttributesMessage'=>'При изменении данных в DzvinPBX в домене будут обновляться: внутренний номер, мобильный номер, email, аватар, пароль SIP',
+    'module_ldap_UpdateAttributes'=>'Обновлять данные в домене при изменении их в DzvinPBX (нужны права на запись)',
     'module_ldap_LdapOrganizationalUnit' => 'Подразделение',
     'module_ldap_LdapUserFilter' => 'Дополнительный фильтр пользователей',
     'module_ldap_LdapCheckGetListHeader' => 'Тест получения списка LDAP пользователей',
@@ -63,11 +63,11 @@ return [
     'module_ldap_ValidateUserEmailAttributeIsEmpty' => 'Не заполнен атрибут с электронной почтой пользователя в домене',
     'module_ldap_ValidateUserAccountControlIsEmpty' => 'Не заполнен атрибут с атрибутом активности пользователя в домене',
     'module_ldap_LdapManualSyncHeader'=>'Ручная синхронизация',
-    'module_ldap_LdapManualSyncManual'=>'При нажатии на кнопку будет выполнена синхронизация порции из 20 пользователей между указанным контроллером домена и MikoPBX',
+    'module_ldap_LdapManualSyncManual'=>'При нажатии на кнопку будет выполнена синхронизация порции из 20 пользователей между указанным контроллером домена и DzvinPBX',
     'module_ldap_LdapManualSyncButton'=>'Синхронизировать данные',
     'module_ldap_usersSyncResult'=>'Статус',
     'module_ldap_userHadChangesOnTheSide'=>'Обновлен',
-    'module_ldap_OnPBXSide'=>'внутри MikoPBX',
+    'module_ldap_OnPBXSide'=>'внутри DzvinPBX',
     'module_ldap_OnDomainSide'=>'в домене',
     'module_ldap_SKIPPED'=>'пропущен',
     'module_ldap_UPDATED'=>'обработан',
@@ -115,7 +115,7 @@ return [
     'module_ldap_tt_verify_warning_header'=>'Небезопасно без CA',
     'module_ldap_tt_verify_warning'=>'При выключенной проверке соединение всё ещё шифруется, но любой с доступом к сети может выдать себя за LDAP-сервер.',
     'module_ldap_tt_updateAttr_header'=>'Двусторонняя синхронизация',
-    'module_ldap_tt_updateAttr_desc'=>'Когда включено, изменения в MikoPBX записываются в каталог LDAP. Синхронизируются следующие атрибуты:',
+    'module_ldap_tt_updateAttr_desc'=>'Когда включено, изменения в DzvinPBX записываются в каталог LDAP. Синхронизируются следующие атрибуты:',
     'module_ldap_tt_updateAttr_extension'=>'внутренний номер',
     'module_ldap_tt_updateAttr_mobile'=>'мобильный номер',
     'module_ldap_tt_updateAttr_email'=>'email',

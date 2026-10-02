@@ -1,6 +1,6 @@
 <?php
 /*
- * MikoPBX - free phone system for small business
+ * Dzvin PBX - free phone system for small business
  * Copyright © 2017-2023 Alexey Portnov and Nikolay Beketov
  *
  * This program is free software: you can redistribute it and/or modify
@@ -20,8 +20,8 @@
 namespace Modules\ModuleLdapSync\Lib;
 
 use LdapRecord\Container;
-use MikoPBX\Common\Handlers\CriticalErrorsHandler;
-use MikoPBX\Common\Providers\ManagedCacheProvider;
+use DzvinPBX\Common\Handlers\CriticalErrorsHandler;
+use DzvinPBX\Common\Providers\ManagedCacheProvider;
 use Phalcon\Di\Injectable;
 
 
@@ -279,7 +279,7 @@ class LdapSyncConnector extends Injectable
             return $cached;
         }
         $candidates = [
-            '/etc/ssl/certs/ca-certificates.crt',   // Debian / Alpine / MikoPBX
+            '/etc/ssl/certs/ca-certificates.crt',   // Debian / Alpine / DzvinPBX
             '/etc/pki/tls/certs/ca-bundle.crt',     // RHEL / CentOS
             '/etc/ssl/cert.pem',                    // macOS / BSD
         ];

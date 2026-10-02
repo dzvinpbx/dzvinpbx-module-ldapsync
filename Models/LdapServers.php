@@ -1,6 +1,6 @@
 <?php
 /*
- * MikoPBX - free phone system for small business
+ * Dzvin PBX - free phone system for small business
  * Copyright © 2017-2023 Alexey Portnov and Nikolay Beketov
  *
  * This program is free software: you can redistribute it and/or modify
@@ -19,7 +19,7 @@
 
 namespace Modules\ModuleLdapSync\Models;
 
-use MikoPBX\Modules\Models\ModulesModelsBase;
+use DzvinPBX\Modules\Models\ModulesModelsBase;
 
 class LdapServers extends ModulesModelsBase
 {
@@ -127,14 +127,14 @@ class LdapServers extends ModulesModelsBase
     public ?string $attributes='';
 
     /**
-     * Organizational unit filter  i.e. s OU=Accounting,DC=miko,DC=ru
+     * Organizational unit filter  i.e. s OU=Accounting,DC=example,DC=com
      *
      * @Column(type="string", nullable=true)
      */
     public $organizationalUnit;
 
     /**
-     * Flag update AD attributes from MikoPBX
+     * Flag update AD attributes from DzvinPBX
      *
      * @Column(type="string", length=1, nullable=false)
      */
@@ -172,4 +172,4 @@ class LdapServers extends ModulesModelsBase
         );
     }
 
-}
+}

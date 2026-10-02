@@ -1,7 +1,7 @@
 <?php
 return [
     /*
- * MikoPBX - free phone system for small business
+ * Dzvin PBX - free phone system for small business
  * Copyright © 2017-2023 Alexey Portnov and Nikolay Beketov
  *
  * This program is free software: you can redistribute it and/or modify
@@ -34,14 +34,14 @@ return [
     'module_ldap_LdapAdminLogin' => 'Etki alanına okuma/yazma erişimi olan kullanıcı adı ve şifre',
     'module_ldap_LdapBaseDN' => 'Etki alanı kökü',
     'module_ldap_LdapPassword' => 'Şifre',
-    'module_ldap_LdapAttributesHeader' => 'MikoPBX\'teki verilerle eşleştirmeye yönelik etki alanındaki özellikler',
+    'module_ldap_LdapAttributesHeader' => 'DzvinPBX\'teki verilerle eşleştirmeye yönelik etki alanındaki özellikler',
     'module_ldap_UserExtensionAttribute' => 'Kullanıcının dahili numarası',
     'module_ldap_UserMobileAttribute' => 'Cep telefonu',
     'module_ldap_UserEmailAttribute' => 'E-posta adresi',
     'module_ldap_UserNameAttribute' => 'Kullanıcının adı ve soyadı',
     'module_ldap_UserAccountControl' => 'Kullanıcının engelleme durumunun saklandığı nitelik',
     'module_ldap_UserAvatarAttribute' => 'Fotoğraflı öznitelik',
-    'module_ldap_UpdateAttributes' => 'MikoPBX\'te değişiklik yaparken etki alanındaki verileri güncelleyin (yazma hakları gerekir)',
+    'module_ldap_UpdateAttributes' => 'DzvinPBX\'te değişiklik yaparken etki alanındaki verileri güncelleyin (yazma hakları gerekir)',
     'module_ldap_LdapOrganizationalUnit' => 'Alt bölüm',
     'module_ldap_LdapUserFilter' => 'Ek kullanıcı filtresi',
     'module_ldap_LdapCheckGetListHeader' => 'LDAP kullanıcılarının listesini almak için test edin',
@@ -54,11 +54,11 @@ return [
     'module_ldap_ValidateAdministrativePasswordIsEmpty' => 'Etki alanı kullanıcısı için parola doldurulmadı',
     'module_ldap_ValidateBaseDNIsEmpty' => 'Etki alanı kökü doldurulmadı',
     'module_ldap_LdapManualSyncHeader' => 'Manuel senkronizasyon',
-    'module_ldap_LdapManualSyncManual' => 'Butona tıkladığınızda 20 kullanıcının bir kısmı belirtilen domain denetleyicisi ile MikoPBX arasında senkronize edilecektir',
+    'module_ldap_LdapManualSyncManual' => 'Butona tıkladığınızda 20 kullanıcının bir kısmı belirtilen domain denetleyicisi ile DzvinPBX arasında senkronize edilecektir',
     'module_ldap_LdapManualSyncButton' => 'Verileri senkronize et',
     'module_ldap_usersSyncResult' => 'Durum',
     'module_ldap_userHadChangesOnTheSide' => 'Güncellenmiş',
-    'module_ldap_OnPBXSide' => 'MikoPBX\'in içinde',
+    'module_ldap_OnPBXSide' => 'DzvinPBX\'in içinde',
     'module_ldap_OnDomainSide' => 'etki alanında',
     'module_ldap_SKIPPED' => 'atlandı',
     'module_ldap_UPDATED' => 'işlenmiş',
@@ -82,7 +82,7 @@ return [
     'module_ldap_SyncTabHeader' => 'Senkronizasyon ve çatışmalar',
     'module_ldap_TabAttributes' => 'Senkronizasyon alanları',
     'module_ldap_DeleteAllConflicts' => 'Tüm çakışmaları temizle',
-    'module_ldap_UpdateAttributesMessage' => 'MikoPBX\'te veriler değiştiğinde alanda aşağıdakiler güncellenecektir: dahili numara, cep telefonu numarası, e-posta, avatar, SIP şifresi',
+    'module_ldap_UpdateAttributesMessage' => 'DzvinPBX\'te veriler değiştiğinde alanda aşağıdakiler güncellenecektir: dahili numara, cep telefonu numarası, e-posta, avatar, SIP şifresi',
     'module_ldap_UserPasswordAttribute' => 'SIP şifresi',
     'module_ldap_UseTLS' => 'TLS/SSL',
     'module_ldap_UserName' => 'Kullanıcı adı',

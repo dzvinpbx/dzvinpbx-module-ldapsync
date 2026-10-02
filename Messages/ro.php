@@ -1,7 +1,7 @@
 <?php
 return [
     /*
- * MikoPBX - free phone system for small business
+ * Dzvin PBX - free phone system for small business
  * Copyright © 2017-2023 Alexey Portnov and Nikolay Beketov
  *
  * This program is free software: you can redistribute it and/or modify
@@ -34,14 +34,14 @@ return [
     'module_ldap_LdapAdminLogin' => 'Nume de utilizator și parolă cu acces de citire/scriere la domeniu',
     'module_ldap_LdapBaseDN' => 'Rădăcina domeniului',
     'module_ldap_LdapPassword' => 'Parola',
-    'module_ldap_LdapAttributesHeader' => 'Atribute din domeniu pentru potrivirea cu datele din MikoPBX',
+    'module_ldap_LdapAttributesHeader' => 'Atribute din domeniu pentru potrivirea cu datele din DzvinPBX',
     'module_ldap_UserExtensionAttribute' => 'Numărul intern al utilizatorului',
     'module_ldap_UserMobileAttribute' => 'Telefon mobil',
     'module_ldap_UserEmailAttribute' => 'Adresa de e-mail',
     'module_ldap_UserNameAttribute' => 'Prenumele și numele utilizatorului',
     'module_ldap_UserAccountControl' => 'Atributul în care este stocată starea de blocare a utilizatorului',
     'module_ldap_UserAvatarAttribute' => 'Atribut cu fotografie',
-    'module_ldap_UpdateAttributes' => 'Actualizați datele din domeniu atunci când le modificați în MikoPBX (sunt necesare drepturi de scriere)',
+    'module_ldap_UpdateAttributes' => 'Actualizați datele din domeniu atunci când le modificați în DzvinPBX (sunt necesare drepturi de scriere)',
     'module_ldap_LdapOrganizationalUnit' => 'Subdiviziune',
     'module_ldap_LdapUserFilter' => 'Filtru suplimentar de utilizator',
     'module_ldap_LdapCheckGetListHeader' => 'Testați pentru a obține lista de utilizatori LDAP',
@@ -54,11 +54,11 @@ return [
     'module_ldap_ValidateAdministrativePasswordIsEmpty' => 'Parola nu a fost completată pentru utilizatorul de domeniu',
     'module_ldap_ValidateBaseDNIsEmpty' => 'Rădăcina domeniului nu este completată',
     'module_ldap_LdapManualSyncHeader' => 'Sincronizare manuală',
-    'module_ldap_LdapManualSyncManual' => 'Când faceți clic pe butonul, o parte din 20 de utilizatori vor fi sincronizate între controlerul de domeniu specificat și MikoPBX',
+    'module_ldap_LdapManualSyncManual' => 'Când faceți clic pe butonul, o parte din 20 de utilizatori vor fi sincronizate între controlerul de domeniu specificat și DzvinPBX',
     'module_ldap_LdapManualSyncButton' => 'Sincronizați datele',
     'module_ldap_usersSyncResult' => 'stare',
     'module_ldap_userHadChangesOnTheSide' => 'Actualizat',
-    'module_ldap_OnPBXSide' => 'în interiorul MikoPBX',
+    'module_ldap_OnPBXSide' => 'în interiorul DzvinPBX',
     'module_ldap_OnDomainSide' => 'în domeniu',
     'module_ldap_SKIPPED' => 'sarit',
     'module_ldap_UPDATED' => 'prelucrate',
@@ -83,7 +83,7 @@ return [
     'module_ldap_TabAttributes' => 'Câmpuri de sincronizare',
     'module_ldap_DeleteAllConflicts' => 'Ștergeți toate conflictele',
     'module_ldap_UserPasswordAttribute' => 'parola SIP',
-    'module_ldap_UpdateAttributesMessage' => 'Când datele se modifică în MikoPBX, următoarele vor fi actualizate în domeniu: număr intern, număr de mobil, e-mail, avatar, parolă SIP',
+    'module_ldap_UpdateAttributesMessage' => 'Când datele se modifică în DzvinPBX, următoarele vor fi actualizate în domeniu: număr intern, număr de mobil, e-mail, avatar, parolă SIP',
     'module_ldap_UseTLS' => 'TLS/SSL',
     'module_ldap_UserName' => 'Nume de utilizator',
     'module_ldap_UserNumber' => 'Numărul de extensie',

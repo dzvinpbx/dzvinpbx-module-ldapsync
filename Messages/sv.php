@@ -1,7 +1,7 @@
 <?php
 return [
     /*
- * MikoPBX - free phone system for small business
+ * Dzvin PBX - free phone system for small business
  * Copyright © 2017-2023 Alexey Portnov and Nikolay Beketov
  *
  * This program is free software: you can redistribute it and/or modify
@@ -34,14 +34,14 @@ return [
     'module_ldap_LdapAdminLogin' => 'Användarnamn och lösenord med läs/skrivbehörighet till domänen',
     'module_ldap_LdapBaseDN' => 'Domänrot',
     'module_ldap_LdapPassword' => 'Lösenord',
-    'module_ldap_LdapAttributesHeader' => 'Attribut i domänen för matchning med data i MikoPBX',
+    'module_ldap_LdapAttributesHeader' => 'Attribut i domänen för matchning med data i DzvinPBX',
     'module_ldap_UserExtensionAttribute' => 'Användarens anknytningsnummer',
     'module_ldap_UserMobileAttribute' => 'Mobiltelefon',
     'module_ldap_UserEmailAttribute' => 'E-postadress',
     'module_ldap_UserNameAttribute' => 'Användarens för- och efternamn',
     'module_ldap_UserAccountControl' => 'Attribut där användarens låsstatus lagras',
     'module_ldap_UserAvatarAttribute' => 'Fotoattribut',
-    'module_ldap_UpdateAttributes' => 'Uppdatera data i domänen när du ändrar den i MikoPBX (skrivrättigheter krävs)',
+    'module_ldap_UpdateAttributes' => 'Uppdatera data i domänen när du ändrar den i DzvinPBX (skrivrättigheter krävs)',
     'module_ldap_LdapOrganizationalUnit' => 'Indelning',
     'module_ldap_LdapUserFilter' => 'Ytterligare användarfilter',
     'module_ldap_LdapCheckGetListHeader' => 'Testa för att få lista över LDAP-användare',
@@ -54,11 +54,11 @@ return [
     'module_ldap_ValidateAdministrativePasswordIsEmpty' => 'Lösenordet är inte ifyllt för domänanvändaren',
     'module_ldap_ValidateBaseDNIsEmpty' => 'Domänroten är inte ifylld',
     'module_ldap_LdapManualSyncHeader' => 'Manuell synkronisering',
-    'module_ldap_LdapManualSyncManual' => 'När du klickar på knappen kommer en del av 20 användare att synkroniseras mellan den angivna domänkontrollanten och MikoPBX',
+    'module_ldap_LdapManualSyncManual' => 'När du klickar på knappen kommer en del av 20 användare att synkroniseras mellan den angivna domänkontrollanten och DzvinPBX',
     'module_ldap_LdapManualSyncButton' => 'Synkronisera data',
     'module_ldap_usersSyncResult' => 'Status',
     'module_ldap_userHadChangesOnTheSide' => 'Uppdaterad',
-    'module_ldap_OnPBXSide' => 'inuti MikoPBX',
+    'module_ldap_OnPBXSide' => 'inuti DzvinPBX',
     'module_ldap_OnDomainSide' => 'i domänen',
     'module_ldap_SKIPPED' => 'hoppat över',
     'module_ldap_UPDATED' => 'bearbetas',
@@ -82,7 +82,7 @@ return [
     'module_ldap_SyncTabHeader' => 'Synkronisering och konflikter',
     'module_ldap_TabAttributes' => 'Synkroniseringsfält',
     'module_ldap_DeleteAllConflicts' => 'Rensa alla konflikter',
-    'module_ldap_UpdateAttributesMessage' => 'När data ändras i MikoPBX kommer följande att uppdateras i domänen: internnummer, mobilnummer, e-post, avatar, SIP-lösenord',
+    'module_ldap_UpdateAttributesMessage' => 'När data ändras i DzvinPBX kommer följande att uppdateras i domänen: internnummer, mobilnummer, e-post, avatar, SIP-lösenord',
     'module_ldap_UserPasswordAttribute' => 'SIP-lösenord',
     'module_ldap_UseTLS' => 'TLS/SSL',
     'module_ldap_UserName' => 'Användarnamn',

@@ -1,6 +1,6 @@
 <?php
 /*
- * MikoPBX - free phone system for small business
+ * Dzvin PBX - free phone system for small business
  * Copyright © 2017-2023 Alexey Portnov and Nikolay Beketov
  *
  * This program is free software: you can redistribute it and/or modify
@@ -19,15 +19,15 @@
 
 namespace Modules\ModuleLdapSync\Lib\Workers;
 
-use MikoPBX\Common\Providers\ManagedCacheProvider;
-use MikoPBX\Core\Workers\WorkerBase;
+use DzvinPBX\Common\Providers\ManagedCacheProvider;
+use DzvinPBX\Core\Workers\WorkerBase;
 use Modules\ModuleLdapSync\Lib\LdapSyncMain;
-use Modules\ModuleLdapSync\Lib\MikoPBXVersion;
+use Modules\ModuleLdapSync\Lib\DzvinPBXVersion;
 
 require_once 'Globals.php';
 
 /**
- * WorkerLdapSync is a worker class responsible for synchronizing users on LDAP with users on MikoPBX.
+ * WorkerLdapSync is a worker class responsible for synchronizing users on LDAP with users on DzvinPBX.
  *
  * @package Modules\ModuleLdapSync\Lib\Workers
  */
@@ -63,11 +63,11 @@ class WorkerLdapSync extends WorkerBase
             // Sleep for the random delay before the first sync check
             sleep($randomDelay);
 
-            // Sync LDAP and MikoPBX users
+            // Sync LDAP and DzvinPBX users
             LdapSyncMain::syncAllUsers();
         } elseif (time() - $lastSync > 3600) {
             $managedCache->set(self::CACHE_KEY, time(), 86400);
-            // Sync LDAP and MikoPBX users every hour
+            // Sync LDAP and DzvinPBX users every hour
             LdapSyncMain::syncAllUsers();
         }
 
@@ -80,7 +80,7 @@ class WorkerLdapSync extends WorkerBase
      */
     public static function increaseSyncFrequency():void
     {
-        $di=MikoPBXVersion::getDefaultDi();
+        $di=DzvinPBXVersion::getDefaultDi();
         $managedCache = $di->get(ManagedCacheProvider::SERVICE_NAME);
         // Decrease sync interval to 5 minutes if changes occur
         $managedCache->set(self::CACHE_KEY, time()-3300, 86400);

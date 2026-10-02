@@ -1,6 +1,6 @@
 <?php
 /*
- * MikoPBX - free phone system for small business
+ * Dzvin PBX - free phone system for small business
  * Copyright © 2017-2023 Alexey Portnov and Nikolay Beketov
  *
  * This program is free software: you can redistribute it and/or modify
@@ -19,12 +19,12 @@
 
 namespace Modules\ModuleLdapSync\Lib;
 
-use MikoPBX\Common\Models\Extensions;
-use MikoPBX\Common\Models\Sip;
-use MikoPBX\Common\Models\Users;
-use MikoPBX\Common\Providers\PBXCoreRESTClientProvider;
-use MikoPBX\Core\System\PasswordService;
-use MikoPBX\Modules\Logger;
+use DzvinPBX\Common\Models\Extensions;
+use DzvinPBX\Common\Models\Sip;
+use DzvinPBX\Common\Models\Users;
+use DzvinPBX\Common\Providers\PBXCoreRESTClientProvider;
+use DzvinPBX\Core\System\PasswordService;
+use DzvinPBX\Modules\Logger;
 use Modules\ModuleLdapSync\Lib\Workers\WorkerLdapSync;
 use Modules\ModuleLdapSync\Models\ADUsers;
 use Modules\ModuleLdapSync\Models\LdapServers;
@@ -96,8 +96,8 @@ class LdapSyncMain extends Injectable
                     LdapSyncConflicts::recordSyncConflict($ldapCredentials['id'], $result->data[Constants::CONFLICT_DATA], $cleanMessages, $result->data[Constants::SYNC_RESULT_CONFLICT_SIDE]);
                 }
             }
-            if (!empty($result->data[Constants::USER_ID_IN_MIKOPBX])) {
-                $processedUser[Constants::USER_ID_IN_MIKOPBX] = $result->data[Constants::USER_ID_IN_MIKOPBX];
+            if (!empty($result->data[Constants::USER_ID_IN_DZVINPBX])) {
+                $processedUser[Constants::USER_ID_IN_DZVINPBX] = $result->data[Constants::USER_ID_IN_DZVINPBX];
             }
 
             if ($result->success) {
@@ -130,7 +130,7 @@ class LdapSyncMain extends Injectable
      */
     public static function updateUserData(array $ldapCredentials, array $userFromLdap): AnswerStructure
     {
-        // 1. Find data stored in MikoPBX about the user from LDAP
+        // 1. Find data stored in DzvinPBX about the user from LDAP
         $userGuid = $userFromLdap[Constants::USER_GUID_ATTR];
         $parameters = [
             'conditions' => 'server_id=:server_id: and guid=:guid:',
@@ -151,26 +151,26 @@ class LdapSyncMain extends Injectable
         $userDataFromLdap = self::getUserDataFromLdap($ldapCredentials['attributes'], $userFromLdap);
         $domainParamsHash = md5(implode('', $userDataFromLdap));
 
-        // 3. Prepare data structure from MikoPBX database
+        // 3. Prepare data structure from DzvinPBX database
         if ($previousSyncUser->user_id) {
-            $userDataFromMikoPBX = self::getUserOnMikoPBX($previousSyncUser->user_id);
+            $userDataFromDzvinPBX = self::getUserOnDzvinPBX($previousSyncUser->user_id);
         } else {
-            $userDataFromMikoPBX = [];
+            $userDataFromDzvinPBX = [];
         }
         // Sort the array by keys to ensure consistent ordering
-        ksort($userDataFromMikoPBX);
+        ksort($userDataFromDzvinPBX);
 
-        $localParamsHash = md5(implode('', $userDataFromMikoPBX));
+        $localParamsHash = md5(implode('', $userDataFromDzvinPBX));
 
         // 4. Compare data hash with stored value
         if ($previousSyncUser->domainParamsHash !== $domainParamsHash
-            || $userDataFromMikoPBX === []
+            || $userDataFromDzvinPBX === []
         ) {
             // Save user disabled status
             $previousSyncUser->disabled = ($userDataFromLdap[Constants::USER_DISABLED] ?? false) ? '1' : '0';
 
             // Do not create disabled users
-            if ($previousSyncUser->disabled === '1' && $userDataFromMikoPBX === []) {
+            if ($previousSyncUser->disabled === '1' && $userDataFromDzvinPBX === []) {
                 $response = new AnswerStructure();
                 $response->data[Constants::USER_SYNC_RESULT] = Constants::SYNC_RESULT_SKIPPED;
                 $response->success = true;
@@ -218,32 +218,32 @@ class LdapSyncMain extends Injectable
         } elseif (
             $previousSyncUser->localParamsHash !== $localParamsHash
             && $ldapCredentials['updateAttributes'] === '1'
-            && !empty($userDataFromMikoPBX)
+            && !empty($userDataFromDzvinPBX)
         ) {
             // 6. Changes on PBX side, need update domain info
-            $response = self::updateADUser($ldapCredentials, $previousSyncUser->guid, $userDataFromMikoPBX);
+            $response = self::updateADUser($ldapCredentials, $previousSyncUser->guid, $userDataFromDzvinPBX);
             if ($response->success) {
                 $response->data[Constants::USER_HAD_CHANGES_ON] = Constants::HAD_CHANGES_ON_AD;
                 $previousSyncUser->localParamsHash = $localParamsHash;
             } else {
                 $response->data[Constants::USER_SYNC_RESULT] = Constants::SYNC_RESULT_CONFLICT;
                 $response->data[Constants::SYNC_RESULT_CONFLICT_SIDE] = Constants::LDAP_UPDATE_CONFLICT;
-                $response->data[Constants::CONFLICT_DATA]=$userDataFromMikoPBX;
+                $response->data[Constants::CONFLICT_DATA]=$userDataFromDzvinPBX;
                 unset($response->data[Constants::CONFLICT_DATA][Constants::USER_AVATAR_ATTR]);
             }
         } else {
             // No changes on both sides
             $response = new AnswerStructure();
             $response->data[Constants::USER_SYNC_RESULT] = Constants::SYNC_RESULT_SKIPPED;
-            if (isset($userDataFromMikoPBX[Constants::USER_ID_IN_MIKOPBX])){
-                $response->data[Constants::USER_ID_IN_MIKOPBX] = $userDataFromMikoPBX[Constants::USER_ID_IN_MIKOPBX];
+            if (isset($userDataFromDzvinPBX[Constants::USER_ID_IN_DZVINPBX])){
+                $response->data[Constants::USER_ID_IN_DZVINPBX] = $userDataFromDzvinPBX[Constants::USER_ID_IN_DZVINPBX];
             }
             $response->success = true;
             return $response;
         }
 
-        if (isset($userDataFromMikoPBX[Constants::USER_ID_IN_MIKOPBX])){
-            $response->data[Constants::USER_ID_IN_MIKOPBX] = $userDataFromMikoPBX[Constants::USER_ID_IN_MIKOPBX];
+        if (isset($userDataFromDzvinPBX[Constants::USER_ID_IN_DZVINPBX])){
+            $response->data[Constants::USER_ID_IN_DZVINPBX] = $userDataFromDzvinPBX[Constants::USER_ID_IN_DZVINPBX];
         }
 
         // Save hashes into database
@@ -322,12 +322,12 @@ class LdapSyncMain extends Injectable
     }
 
     /**
-     * Get user information from MikoPBX.
+     * Get user information from DzvinPBX.
      *
      * @param string $userId The ID of the user.
-     * @return mixed|null The user information from MikoPBX.
+     * @return mixed|null The user information from DzvinPBX.
      */
-    public static function getUserOnMikoPBX(string $userId): array
+    public static function getUserOnDzvinPBX(string $userId): array
     {
         // Query parameters for retrieving user information.
         $parameters = [
@@ -345,7 +345,7 @@ class LdapSyncMain extends Injectable
                 Constants::USER_EMAIL_ATTR => 'Users.email',
                 Constants::USER_AVATAR_ATTR => 'Users.avatar',
                 Constants::USER_PASSWORD_ATTR => 'Sip.secret',
-                Constants::USER_ID_IN_MIKOPBX=>'Users.id',
+                Constants::USER_ID_IN_DZVINPBX=>'Users.id',
             ],
             'joins' => [
                 'Extensions' => [
@@ -369,7 +369,7 @@ class LdapSyncMain extends Injectable
             ],
         ];
         // Build and execute the query to fetch user information.
-        $di=MikoPBXVersion::getDefaultDi();
+        $di=DzvinPBXVersion::getDefaultDi();
         $result = $di->get('modelsManager')->createBuilder($parameters)
             ->getQuery()
             ->getSingleResult();
@@ -394,7 +394,7 @@ class LdapSyncMain extends Injectable
         // can record it as a conflict on the Conflicts tab.
         $weakPasswordNotice = null;
 
-        $pbxUserData = self::findUserInMikoPBX($userDataFromLdap, $currentUserId);
+        $pbxUserData = self::findUserInDzvinPBX($userDataFromLdap, $currentUserId);
 
         if ($userDataFromLdap[Constants::USER_DISABLED] ?? false) {
             $result = new AnswerStructure();
@@ -405,7 +405,7 @@ class LdapSyncMain extends Injectable
             return $result;
         }
 
-        $di = MikoPBXVersion::getDefaultDi();
+        $di = DzvinPBXVersion::getDefaultDi();
         $isNewEmployee = empty($pbxUserData['user_id']);
 
         // Get existing employee data or defaults for new employee
@@ -593,13 +593,13 @@ class LdapSyncMain extends Injectable
     }
 
     /**
-     * Find a user extension id in the MikoPBX DB based on LDAP data.
+     * Find a user extension id in the DzvinPBX DB based on LDAP data.
      *
      * @param array $userDataFromLdap The LDAP user data.
      * @param ?string $currentUserId The current user id.
      * @return array The user data if found, otherwise an empty array.
      */
-    public static function findUserInMikoPBX(array $userDataFromLdap, ?string $currentUserId = null): array
+    public static function findUserInDzvinPBX(array $userDataFromLdap, ?string $currentUserId = null): array
     {
         $parameters = [
             'models' => [
@@ -652,17 +652,17 @@ class LdapSyncMain extends Injectable
         }
 
         $parameters['conditions'] = '(' . substr($parameters['conditions'], 3) . ') AND Extensions.type="' . Extensions::TYPE_SIP . '"';
-        $userDataFromMikoPBX = null;
+        $userDataFromDzvinPBX = null;
         if (!empty($parameters['bind'])) {
-            $di=MikoPBXVersion::getDefaultDi();
-            $userDataFromMikoPBX = $di->get('modelsManager')->createBuilder($parameters)
+            $di=DzvinPBXVersion::getDefaultDi();
+            $userDataFromDzvinPBX = $di->get('modelsManager')->createBuilder($parameters)
                 ->getQuery()
                 ->getSingleResult();
         }
-        if ($userDataFromMikoPBX === null) {
+        if ($userDataFromDzvinPBX === null) {
             $result = [];
         } else {
-            $result = $userDataFromMikoPBX->toArray();
+            $result = $userDataFromDzvinPBX->toArray();
         }
 
         return $result;

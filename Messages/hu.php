@@ -1,7 +1,7 @@
 <?php
 return [
     /*
- * MikoPBX - free phone system for small business
+ * Dzvin PBX - free phone system for small business
  * Copyright © 2017-2023 Alexey Portnov and Nikolay Beketov
  *
  * This program is free software: you can redistribute it and/or modify
@@ -36,14 +36,14 @@ return [
     'module_ldap_LdapAdminLogin' => 'Felhasználónév és jelszó írási és olvasási jogosultsággal a tartományban',
     'module_ldap_LdapBaseDN' => 'Domain gyökér',
     'module_ldap_LdapPassword' => 'Jelszó',
-    'module_ldap_LdapAttributesHeader' => 'Attribútumok a tartományban a MikoPBX-ben lévő adatokkal való egyeztetéshez',
+    'module_ldap_LdapAttributesHeader' => 'Attribútumok a tartományban a DzvinPBX-ben lévő adatokkal való egyeztetéshez',
     'module_ldap_UserExtensionAttribute' => 'Felhasználó belső száma',
     'module_ldap_UserMobileAttribute' => 'Mobiltelefon',
     'module_ldap_UserEmailAttribute' => 'E-mail cím',
     'module_ldap_UserNameAttribute' => 'Felhasználó kereszt- és vezetékneve',
     'module_ldap_UserAccountControl' => 'Az attribútum, ahol a felhasználó blokkolási állapota tárolva van',
     'module_ldap_UserAvatarAttribute' => 'Attribútum fotóval',
-    'module_ldap_UpdateAttributes' => 'A MikoPBX-ben történő módosításkor frissítse a domain adatait (írási jogosultság szükséges)',
+    'module_ldap_UpdateAttributes' => 'A DzvinPBX-ben történő módosításkor frissítse a domain adatait (írási jogosultság szükséges)',
     'module_ldap_LdapOrganizationalUnit' => 'Felosztás',
     'module_ldap_LdapUserFilter' => 'További felhasználói szűrő',
     'module_ldap_LdapCheckGetListHeader' => 'Teszt az LDAP-felhasználók listájának megszerzéséhez',
@@ -61,11 +61,11 @@ return [
     'module_ldap_ValidateUserEmailAttributeIsEmpty' => 'A domainben lévő felhasználó e-mail-címét tartalmazó attribútum nincs kitöltve',
     'module_ldap_ValidateUserAccountControlIsEmpty' => 'A felhasználói tevékenység attribútuma a tartományban nincs kitöltve',
     'module_ldap_LdapManualSyncHeader' => 'Kézi szinkronizálás',
-    'module_ldap_LdapManualSyncManual' => 'Ha rákattint a gombra, 20 felhasználó egy része szinkronizálva lesz a megadott tartományvezérlő és a MikoPBX között.',
+    'module_ldap_LdapManualSyncManual' => 'Ha rákattint a gombra, 20 felhasználó egy része szinkronizálva lesz a megadott tartományvezérlő és a DzvinPBX között.',
     'module_ldap_LdapManualSyncButton' => 'Adatok szinkronizálása',
     'module_ldap_usersSyncResult' => 'Állapot',
     'module_ldap_userHadChangesOnTheSide' => 'Frissítve',
-    'module_ldap_OnPBXSide' => 'MikoPBX-en belül',
+    'module_ldap_OnPBXSide' => 'DzvinPBX-en belül',
     'module_ldap_OnDomainSide' => 'a domainben',
     'module_ldap_SKIPPED' => 'nem fogadott',
     'module_ldap_UPDATED' => 'feldolgozott',
@@ -83,7 +83,7 @@ return [
     'module_ldap_TabAttributes' => 'Szinkronizálási mezők',
     'module_ldap_DeleteAllConflicts' => 'Törölje az összes ütközést',
     'module_ldap_UseTLS' => 'TLS/SSL',
-    'module_ldap_UpdateAttributesMessage' => 'Amikor a MikoPBX-ben változnak az adatok, a következők frissülnek a domainben: belső szám, mobilszám, email, avatar, SIP jelszó',
+    'module_ldap_UpdateAttributesMessage' => 'Amikor a DzvinPBX-ben változnak az adatok, a következők frissülnek a domainben: belső szám, mobilszám, email, avatar, SIP jelszó',
     'module_ldap_UserPasswordAttribute' => 'SIP jelszó',
     'module_ldap_UserName' => 'Felhasználónév',
     'module_ldap_UserNumber' => 'Kiterjesztés száma',

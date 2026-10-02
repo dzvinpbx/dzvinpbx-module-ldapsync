@@ -1,6 +1,6 @@
 <?php
 /*
- * MikoPBX - free phone system for small business
+ * Dzvin PBX - free phone system for small business
  * Copyright © 2017-2023 Alexey Portnov and Nikolay Beketov
  *
  * This program is free software: you can redistribute it and/or modify
@@ -19,8 +19,8 @@
 
 namespace Modules\ModuleLdapSync\App\Controllers;
 
-use MikoPBX\AdminCabinet\Controllers\BaseController;
-use MikoPBX\AdminCabinet\Providers\AssetProvider;
+use DzvinPBX\AdminCabinet\Controllers\BaseController;
+use DzvinPBX\AdminCabinet\Providers\AssetProvider;
 use Modules\ModuleLdapSync\App\Forms\LdapConfigForm;
 use Modules\ModuleLdapSync\Lib\Constants;
 use Modules\ModuleLdapSync\Models\LdapServers;
@@ -89,7 +89,7 @@ class ModuleLdapSyncController extends BaseController
             Constants::USER_ACCOUNT_CONTROL_ATTR,
             Constants::USER_GUID_ATTR,
             Constants::USER_DISABLED,
-            Constants::USER_ID_IN_MIKOPBX
+            Constants::USER_ID_IN_DZVINPBX
         ]));
         $this->view->setVar('userDisabledAttribute', Constants::USER_DISABLED);
         $this->view->setVar('ldapForm', new LdapConfigForm($serverConfig));

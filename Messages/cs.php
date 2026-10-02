@@ -1,7 +1,7 @@
 <?php
 return [
     /*
- * MikoPBX - free phone system for small business
+ * Dzvin PBX - free phone system for small business
  * Copyright © 2017-2023 Alexey Portnov and Nikolay Beketov
  *
  * This program is free software: you can redistribute it and/or modify
@@ -34,14 +34,14 @@ return [
     'module_ldap_LdapAdminLogin' => 'Uživatelské jméno a heslo s přístupem pro čtení/zápis do domény',
     'module_ldap_LdapBaseDN' => 'Kořen domény',
     'module_ldap_LdapPassword' => 'Heslo',
-    'module_ldap_LdapAttributesHeader' => 'Atributy v doméně pro párování s daty v MikoPBX',
+    'module_ldap_LdapAttributesHeader' => 'Atributy v doméně pro párování s daty v DzvinPBX',
     'module_ldap_UserExtensionAttribute' => 'Interní číslo uživatele',
     'module_ldap_UserMobileAttribute' => 'Mobilní telefon',
     'module_ldap_UserEmailAttribute' => 'E-mailová adresa',
     'module_ldap_UserNameAttribute' => 'Jméno a příjmení uživatele',
     'module_ldap_UserAccountControl' => 'Atribut, kde je uložen stav blokování uživatele',
     'module_ldap_UserAvatarAttribute' => 'Atribut s fotografií',
-    'module_ldap_UpdateAttributes' => 'Aktualizace dat v doméně při její změně v MikoPBX (vyžaduje se oprávnění k zápisu)',
+    'module_ldap_UpdateAttributes' => 'Aktualizace dat v doméně při její změně v DzvinPBX (vyžaduje se oprávnění k zápisu)',
     'module_ldap_LdapOrganizationalUnit' => 'Pododdělení',
     'module_ldap_LdapUserFilter' => 'Další uživatelský filtr',
     'module_ldap_LdapCheckGetListHeader' => 'Otestujte a získejte seznam uživatelů LDAP',
@@ -54,11 +54,11 @@ return [
     'module_ldap_ValidateAdministrativePasswordIsEmpty' => 'Není vyplněno heslo pro uživatele domény',
     'module_ldap_ValidateBaseDNIsEmpty' => 'Kořen domény není vyplněn',
     'module_ldap_LdapManualSyncHeader' => 'Ruční synchronizace',
-    'module_ldap_LdapManualSyncManual' => 'Po kliknutí na tlačítko bude část 20 uživatelů synchronizována mezi určeným doménovým řadičem a MikoPBX',
+    'module_ldap_LdapManualSyncManual' => 'Po kliknutí na tlačítko bude část 20 uživatelů synchronizována mezi určeným doménovým řadičem a DzvinPBX',
     'module_ldap_LdapManualSyncButton' => 'Synchronizujte data',
     'module_ldap_usersSyncResult' => 'Postavení',
     'module_ldap_userHadChangesOnTheSide' => 'Aktualizováno',
-    'module_ldap_OnPBXSide' => 'uvnitř MikoPBX',
+    'module_ldap_OnPBXSide' => 'uvnitř DzvinPBX',
     'module_ldap_OnDomainSide' => 'v doméně',
     'module_ldap_SKIPPED' => 'přeskočeno',
     'module_ldap_UPDATED' => 'zpracováno',
@@ -83,7 +83,7 @@ return [
     'module_ldap_TabAttributes' => 'Synchronizační pole',
     'module_ldap_DeleteAllConflicts' => 'Vymažte všechny konflikty',
     'module_ldap_UseTLS' => 'TLS/SSL',
-    'module_ldap_UpdateAttributesMessage' => 'Při změně dat v MikoPBX budou v doméně aktualizovány: interní číslo, mobilní číslo, email, avatar, SIP heslo',
+    'module_ldap_UpdateAttributesMessage' => 'Při změně dat v DzvinPBX budou v doméně aktualizovány: interní číslo, mobilní číslo, email, avatar, SIP heslo',
     'module_ldap_UserPasswordAttribute' => 'SIP heslo',
     'module_ldap_UserName' => 'Uživatelské jméno',
     'module_ldap_UserNumber' => 'Číslo pobočky',

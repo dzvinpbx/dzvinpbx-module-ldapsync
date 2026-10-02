@@ -1,6 +1,6 @@
 <?php
 /*
- * MikoPBX - free phone system for small business
+ * Dzvin PBX - free phone system for small business
  * Copyright © 2017-2023 Alexey Portnov and Nikolay Beketov
  *
  * This program is free software: you can redistribute it and/or modify
@@ -33,7 +33,7 @@ class Constants
     public const USER_ACCOUNT_CONTROL_ATTR = 'userAccountControl';
     public const USER_DISABLED = 'userDisabled';
     public const USER_SYNC_RESULT = 'usersSyncResult';
-    public const USER_ID_IN_MIKOPBX = 'userIdInMikoPBX';
+    public const USER_ID_IN_DZVINPBX = 'userIdInDzvinPBX';
     public const SYNC_RESULT_UPDATED = 'UPDATED';
     public const SYNC_RESULT_SKIPPED = 'SKIPPED';
 

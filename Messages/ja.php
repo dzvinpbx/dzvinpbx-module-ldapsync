@@ -1,7 +1,7 @@
 <?php
 return [
     /*
- * MikoPBX - free phone system for small business
+ * Dzvin PBX - free phone system for small business
  * Copyright © 2017-2023 Alexey Portnov and Nikolay Beketov
  *
  * This program is free software: you can redistribute it and/or modify
@@ -34,14 +34,14 @@ return [
     'module_ldap_LdapAdminLogin' => 'ドメインへの読み取り/書き込みアクセス権を持つユーザー名とパスワード',
     'module_ldap_LdapBaseDN' => 'ドメインルート',
     'module_ldap_LdapPassword' => 'パスワード',
-    'module_ldap_LdapAttributesHeader' => 'MikoPBX のデータと照合するためのドメインの属性',
+    'module_ldap_LdapAttributesHeader' => 'DzvinPBX のデータと照合するためのドメインの属性',
     'module_ldap_UserExtensionAttribute' => 'ユーザーの内部番号',
     'module_ldap_UserMobileAttribute' => '携帯電話',
     'module_ldap_UserEmailAttribute' => '電子メールアドレス',
     'module_ldap_UserNameAttribute' => 'ユーザーの氏名',
     'module_ldap_UserAccountControl' => 'ユーザーのブロックステータスが保存される属性',
     'module_ldap_UserAvatarAttribute' => '写真付き属性',
-    'module_ldap_UpdateAttributes' => 'MikoPBX でドメインを変更するときにドメイン内のデータを更新します (書き込み権限が必要)',
+    'module_ldap_UpdateAttributes' => 'DzvinPBX でドメインを変更するときにドメイン内のデータを更新します (書き込み権限が必要)',
     'module_ldap_LdapOrganizationalUnit' => '区画',
     'module_ldap_LdapUserFilter' => '追加のユーザーフィルター',
     'module_ldap_LdapCheckGetListHeader' => 'LDAP ユーザーのリストを取得するテスト',
@@ -54,7 +54,7 @@ return [
     'module_ldap_ValidateAdministrativePasswordIsEmpty' => 'ドメインユーザーのパスワードが入力されていません',
     'module_ldap_ValidateBaseDNIsEmpty' => 'ドメインルートが入力されていません',
     'module_ldap_LdapManualSyncHeader' => '手動同期',
-    'module_ldap_LdapManualSyncManual' => 'ボタンをクリックすると、指定したドメイン コントローラーと MikoPBX の間で 20 ユーザーの一部が同期されます。',
+    'module_ldap_LdapManualSyncManual' => 'ボタンをクリックすると、指定したドメイン コントローラーと DzvinPBX の間で 20 ユーザーの一部が同期されます。',
     'module_ldap_LdapManualSyncButton' => 'データを同期する',
     'module_ldap_usersSyncResult' => '状態',
     'module_ldap_userHadChangesOnTheSide' => '更新しました',
@@ -84,7 +84,7 @@ return [
     'module_ldap_DeleteAllConflicts' => 'すべての競合をクリアする',
     'module_ldap_UserPasswordAttribute' => 'SIPパスワード',
     'module_ldap_UseTLS' => 'TLS/SSL',
-    'module_ldap_UpdateAttributesMessage' => 'MikoPBX でデータが変更されると、ドメイン内で内部番号、携帯電話番号、電子メール、アバター、SIP パスワードが更新されます。',
+    'module_ldap_UpdateAttributesMessage' => 'DzvinPBX でデータが変更されると、ドメイン内で内部番号、携帯電話番号、電子メール、アバター、SIP パスワードが更新されます。',
     'module_ldap_UserName' => 'ユーザー名',
     'module_ldap_UserNumber' => '内線番号',
     'module_ldap_findExtension' => 'ユーザーのリストから検索',

@@ -1,6 +1,6 @@
 <?php
 /*
- * MikoPBX - free phone system for small business
+ * Dzvin PBX - free phone system for small business
  * Copyright © 2017-2023 Alexey Portnov and Nikolay Beketov
  *
  * This program is free software: you can redistribute it and/or modify
@@ -19,10 +19,10 @@
 
 namespace Modules\ModuleLdapSync\Lib;
 
-use MikoPBX\Common\Providers\ManagedCacheProvider;
-use MikoPBX\Core\Workers\Cron\WorkerSafeScriptsCore;
-use MikoPBX\Modules\Config\ConfigClass;
-use MikoPBX\PBXCoreREST\Lib\PBXApiResult;
+use DzvinPBX\Common\Providers\ManagedCacheProvider;
+use DzvinPBX\Core\Workers\Cron\WorkerSafeScriptsCore;
+use DzvinPBX\Modules\Config\ConfigClass;
+use DzvinPBX\PBXCoreREST\Lib\PBXApiResult;
 use Modules\ModuleLdapSync\Lib\Workers\WorkerLdapSync;
 use Modules\ModuleLdapSync\Models\LdapServers;
 
@@ -30,7 +30,7 @@ class LdapSyncConf extends ConfigClass
 {
 
     /**
-     * Receive information about mikopbx main database changes
+     * Receive information about dzvinpbx main database changes
      *
      * @param mixed $data
      */
@@ -62,7 +62,6 @@ class LdapSyncConf extends ConfigClass
 
     /**
      * Process PBXCoreREST requests under root rights
-     * @see https://docs.mikopbx.com/mikopbx-development/module-developement/module-class#modulerestapicallback
      *
      * @param array $request GET/POST parameters
      *

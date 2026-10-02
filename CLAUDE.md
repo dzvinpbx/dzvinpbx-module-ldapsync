@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-ModuleLdapSync is a MikoPBX extension module that synchronizes employees from LDAP/Active Directory servers into MikoPBX. It creates user accounts automatically and supports bidirectional sync - extension details can be synchronized back to the domain.
+ModuleLdapSync is a DzvinPBX extension module that synchronizes employees from LDAP/Active Directory servers into DzvinPBX. It creates user accounts automatically and supports bidirectional sync - extension details can be synchronized back to the domain.
 
 ## Build & Development Commands
 
@@ -15,7 +15,7 @@ php -l <file.php>
 
 ### JavaScript Compilation
 ```bash
-/Users/nb/PhpstormProjects/mikopbx/MikoPBXUtils/node_modules/.bin/babel "public/assets/js/src/<file>.js" --out-dir "public/assets/js/" --source-maps inline --presets airbnb
+/Users/nb/PhpstormProjects/dzvinpbx/DzvinPBXUtils/node_modules/.bin/babel "public/assets/js/src/<file>.js" --out-dir "public/assets/js/" --source-maps inline --presets airbnb
 ```
 
 ### Code Quality
@@ -40,7 +40,7 @@ phpstan analyse <file.php>
 - `syncAllUsers()` - syncs all enabled LDAP servers
 - `syncUsersPerServer()` - syncs single server, returns AnswerStructure
 - `updateUserData()` - bidirectional sync logic using hash comparison
-- Uses MikoPBX REST API for user CRUD operations
+- Uses DzvinPBX REST API for user CRUD operations
 
 **LdapSyncConnector** (`Lib/LdapSyncConnector.php`)
 - LDAP connection management using `ldaprecord/ldaprecord` library
@@ -63,7 +63,7 @@ phpstan analyse <file.php>
 1. Worker triggers `LdapSyncMain::syncAllUsers()`
 2. For each enabled server, `LdapSyncConnector` fetches LDAP users
 3. Hash comparison determines which side changed (domain vs PBX)
-4. Updates applied via MikoPBX REST API or `LdapSyncConnector::updateDomainUser()`
+4. Updates applied via DzvinPBX REST API or `LdapSyncConnector::updateDomainUser()`
 5. Conflicts recorded in `Conflicts` model
 
 ### Models
@@ -80,8 +80,8 @@ phpstan analyse <file.php>
 ### Frontend
 - `module-ldap-sync-modify.js` - Main config form (server settings, attribute mapping, manual sync)
 - `module-ldap-sync-index.js` - Server list management
-- Uses Semantic UI components and MikoPBX Form/PbxApi utilities
+- Uses Semantic UI components and DzvinPBX Form/PbxApi utilities
 
 ## CI/CD
 
-GitHub Actions workflow (`.github/workflows/build.yml`) uses shared MikoPBX workflow for building and publishing to MikoPBX marketplace.
+GitHub Actions workflow (`.github/workflows/build.yml`) uses shared DzvinPBX workflow for building and publishing to DzvinPBX marketplace.
